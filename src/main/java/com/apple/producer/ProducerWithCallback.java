@@ -9,7 +9,7 @@ public class ProducerWithCallback {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Properties props = new Properties();
         //kafka集群，broker-list
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "hadoop102:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "0.0.0.0:9092");
         props.put(ProducerConfig.ACKS_CONFIG, "all");
         //重试次数（收不到ack时request.timeout.ms默认30秒就重发消息）
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
